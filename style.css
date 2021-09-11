@@ -1,0 +1,504 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+
+:root{
+    --green:black;
+}
+
+*{
+    font-family: 'Open Sans', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    text-decoration: none;
+    transition: all .5s cubic-bezier(.37,1.14,.26,1.24);
+}
+
+*::selection{
+    background:var(--green);
+    color:#fff;
+}
+body{
+    background: #333;
+}
+
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+.heading{
+    text-align: center;
+    font-size: 4rem;
+    color:#555;
+    padding:1rem;
+    padding-top: 7rem;
+}
+
+.heading i{
+    color:var(--green);
+    font-size: 2rem;
+}
+
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background:black;
+    box-shadow: 0 .1rem .3rem rgba(0,0,0,.3);
+    position: fixed;
+    top:2rem; 
+    left:50%;
+    transform: translateX(-50%);
+    border-radius: .5rem;
+    z-index: 1000;
+    padding: 1rem 5rem;
+    width: 100%;
+}
+
+header .logo{
+    color:white;
+    font-size: 3rem;
+}
+
+header .navbar ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+}
+
+header .navbar ul li{
+    margin:0 1rem;
+}
+
+header .navbar ul li a{
+    font-size: 2rem;
+    color:white;
+}
+header .navbar ul li .active,
+header .navbar ul li a:hover{
+    color:yellow;
+}
+
+header .fa-bars{
+    font-size: 3rem;
+    color:#666;
+    cursor: pointer;
+    display: none;
+}
+.home{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(images/background\ 1.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home .content{
+    text-align: center;
+    padding:1rem;
+}
+
+.home .content h1{
+    font-size: 7rem;
+    color:var(--green);
+}
+
+.home .content p{
+    font-size: 1.9rem;
+    color:#333;
+    text-align: center;
+    align-items: center;
+}
+@media (max-width:768px){
+
+    html{
+        font-size: 55%;
+    }
+
+    header .fa-bars{
+        display: block;
+    }
+
+    header .navbar{
+        position: fixed;
+        top:-100rem; left:0;
+        width: 100%;
+        border-top: .1rem solid #ccc;
+        opacity: 0;
+    }
+
+    header .navbar ul{
+        flex-flow: column;
+        padding:2rem 0;
+        background-color:black;
+    }
+
+    header .navbar ul li{
+        width: 100%;
+        text-align: center;
+        margin:1rem 0;
+    }
+
+    header .navbar ul li a{
+        font-size: 3rem;
+        display: block;
+    }
+
+    .fa-times{
+        transform: rotate(180deg);
+    }
+
+    header .nav-toggle{
+        top:6rem; 
+        opacity: 1;
+    }
+    .home .content h1{
+        font-size: 5rem;
+    }
+
+    .home .content p{
+        width: auto;
+    }
+}
+.destination .row{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.destination .row .image{
+    flex:1 1 40rem;
+    padding:2rem;
+}
+
+.destination .row .image img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.destination .row .content{
+    flex:1 1 40rem;
+    padding:2rem;
+}
+
+.destination .row .content h3{
+    font-size: 3rem;
+    color:var(--green);
+}
+
+.destination .row .content p{
+    font-size: 2.5rem;
+    color:#666;
+    padding:1rem 0;
+}
+.destination .row .content .btn{
+    font-size: 1.7rem;
+    margin-top: 1.4rem;
+    height: 3.5rem;
+    width: 12rem;
+    border-radius: .5rem ;
+    outline: none;
+    border: none;
+    background: #0098a1;
+    color: #fff;
+    cursor: pointer;
+}
+
+.destination .card-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap:wrap;
+    width: 100%;
+}
+.destination .card-container .card{
+    width: 30rem;
+    margin: 2rem;
+    background: #fff;
+    border-radius: .5rem;
+    box-shadow: 0 .3rem .5rem rgba(0,0,0,.3);
+    overflow: hidden;
+    position: relative;
+}
+.destination .card-container .card img{
+    height:25rem;
+    width: 100%;
+    object-fit: cover;
+}
+.destination .card-container .content{
+    padding-bottom: 2rem;
+    text-align: center;
+}
+.destination .card-container .content .title{
+    color: rosybrown;
+    font-size: 3rem;
+}
+.destination .card-container .content .btn{
+    font-size: 1.7rem;
+    margin-top: 1.4rem;
+    height: 3.5rem;
+    width: 12rem;
+    border-radius: .5rem ;
+    outline: none;
+    border: none;
+    background: #0098a1;
+    color: #fff;
+    cursor: pointer;
+}
+.destination .card-container .content .btn:hover{
+    background: none;
+    border: .2rem solid #0098a1;
+    color: #0098a1;
+}
+
+.package{
+    background: whitesmoke;
+    min-height: 100vh;
+}
+
+.package .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap:2rem;
+}
+.package .box-container .box{
+    flex:1 1 30rem;
+    border-radius: .5rem;
+    overflow: hidden;
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.3);
+
+}
+.package .box-container .box img{
+    height: 25rem;
+    width: 100%;
+    object-fit: cover;
+}
+.package .box-container .box .content{
+    padding: 2rem;
+
+}
+.package .box-container .box .content h3{
+    font-size: 2rem;
+    color: #333;
+}
+.package .box-container .box .content h3 i{
+    color: orange;
+}
+.package .box-container .box .content p{
+   font-size:1.2rem;
+    color: #666;
+    padding:1rem 0;
+}
+.package .box-container .box .content .price{
+    font-size:2.1rem;
+    color: #333;
+    padding: .6rem;
+}
+.package .box-container .box .content .btn{
+    font-size: 1.7rem;
+    margin-top: 1.4rem;
+    height: 3.5rem;
+    width: 12rem;
+    border-radius: .5rem ;
+    outline: none;
+    border: none;
+    background: white;
+    color: orange;
+    cursor: pointer;
+}
+.package .box-container .box .content .btn:hover{
+    background: none;
+    border: .2rem solid black;
+}
+.service{
+    background-color: white;
+    min-height: 100vh;
+}
+.service .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}  
+.service .box-container .box{
+    flex: 1 1 30rem;
+    border-radius: .5rem;
+    padding: 1rem;
+    text-align: center;
+}
+.service .box-container .box i{
+    padding: 1rem;
+    font-size: 5rem;
+    color: orange;
+}
+.service .box-container .box p{
+    font-size: 2rem;
+    color: orange;
+}
+.service .box-container .box h3{
+    color: black;
+    font-size: medium;
+}
+.service .box-container .box:hover{
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.3);
+}
+.review{
+    min-height: 100vh;
+    background-color: white;
+}
+.review h3{
+    text-align: center;
+    font-size: medium;
+}
+
+.review .box-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding:2rem 0;
+}
+
+.review .box-container .box{
+    width: 30rem;
+    box-shadow: 0 .3rem .5rem rgba(0,0,0,.3);
+    margin:2rem 1.5rem;
+    text-align: center;
+    padding: 0 2rem;
+    margin: 4rem 1.5rem;
+}
+
+.review .box-container .box .user img{
+    height: 40%;
+    width: 40%;
+    object-fit: cover;
+    border-radius:50%;
+    object-fit: cover;
+    margin:.8rem 1rem;
+}
+.review .box-container .box .user{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: .5rem 0;
+    border-top: .1rem solid #3334;
+}
+
+.review .box-container .box i{
+   font-size: medium;
+   margin-top: 3rem;
+   color: springgreen;
+   opacity: .4;
+}
+.review .box-container .box .user .info h3{
+    font-size: medium;
+} 
+.review .box-container .box .user .info span{
+    font-size: 100%;
+}
+
+
+.review .box-container .box p{
+    color:#666;
+    font-size: 1.5rem;
+    padding: 2rem;
+}
+
+
+.contact{
+    background:#333;
+    min-height: 50vh;
+}
+
+.contact .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 95%;
+    margin:0 auto;
+}
+
+.contact .box-container .box{
+    margin:2rem;
+    flex:1 1 25rem;
+}
+
+.contact .box-container .box .logo{
+    font-size: 3rem;
+    color:var(--green);
+}
+
+.contact .box-container .box p{
+    font-size: 1.7rem;
+    color:#ccc;
+    padding:1rem 0;
+}
+
+.contact .box-container .box .share{
+    text-align: center;
+    font-size: 3rem;
+    color:#fff;
+}
+
+.contact .box-container .box:nth-child(2) a{
+    text-align: center;
+    font-size: 1.7rem;
+    color:#eee;
+    display: block;
+    padding:.5rem 0;
+}
+
+.contact .box-container .box:nth-child(2) a:hover{
+    text-decoration: underline;
+}
+
+.contact .box-container .box .letter{
+    font-size: 3rem;
+    color:#fff;
+}
+
+.contact .box-container .box form input[type="email"]{
+    padding:0 1rem;
+    outline:none;
+    border:.2rem solid var(--green);
+    background:none;
+    font-size: 1.7rem;
+    color:#fff;
+    height:4rem;
+    width:74%;
+}
+
+.contact .box-container .box form button{
+    outline:none;
+    border:none;
+    background:var(--green);
+    font-size: 1.9rem;
+    color:#fff;
+    height:4rem;
+    width:25%;
+    cursor: pointer;
+}
+
+.contact .box-container .box form button:hover{
+    color:var(--green);
+    background:none;
+    border:.1rem solid var(--green);
+}
+
+.contact .credit{
+    text-align: center;
+    color:#fff;
+    font-size: 2rem;
+    width:85%;
+    margin:0 auto;
+    padding:2rem 1rem;
+    border-top: .1rem solid #ccc;
+}
+
+.contact .credit span{
+    color:var(--green);
+}
